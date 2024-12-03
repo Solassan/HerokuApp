@@ -38,7 +38,8 @@ public class TheInputsTest {
         Assert.assertEquals(actualValueDown, "11");
         input.clear();
         input.sendKeys("adc");
-        Assert.assertEquals(actualValue, "adc");
+        String actualValueText = input.getAttribute("value");
+        Assert.assertEquals(actualValueText, "");
     }
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
