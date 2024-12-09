@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class CheckBoxesTest {
-
     WebDriver driver;
 
     @BeforeMethod
@@ -36,6 +35,7 @@ public class CheckBoxesTest {
         b.click();
         Assert.assertFalse(b.isSelected());
     }
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         driver.quit();

@@ -1,6 +1,5 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
@@ -11,7 +10,6 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class AddRemoveElementsTest {
-
     WebDriver driver;
 
     @BeforeMethod
@@ -32,6 +30,7 @@ public class AddRemoveElementsTest {
         driver.findElement(By.xpath("//button[text()='Delete']")).click();
         Assert.assertTrue(elementOnPage);
     }
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         driver.quit();
